@@ -1,0 +1,22 @@
+{
+  "name": "xquad",
+  "displayName": "Xquad",
+  "version": "0.1.0",
+  "description": "Trabalhe com os quadros do Xquad conversando: inicie, conclua e crie cards e veja o status do quadro. Login pelo Xquad, sem token.",
+  "author": {
+    "name": "Xquad"
+  },
+  "homepage": "https://xquad.app",
+  "repository": "https://github.com/ArleyPereira/Xquad-plugins",
+  "license": "MIT",
+  "keywords": [
+    "xquad",
+    "kanban",
+    "mcp",
+    "projetos",
+    "cards"
+  ],
+  "logo": "./assets/icon.png",
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}
