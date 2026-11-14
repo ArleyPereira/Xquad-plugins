@@ -1,11 +1,20 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "xquad",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Trabalhe com os quadros do Xquad conversando: inicie, conclua e crie cards e veja o status do quadro. Login pelo Xquad, sem token.",
-  "author": { "name": "Xquad", "url": "https://xquad.app" },
+  "author": {
+    "name": "Xquad",
+    "url": "https://xquad.app"
+  },
   "homepage": "https://xquad.app",
   "repository": "https://github.com/ArleyPereira/Xquad-plugins",
   "license": "MIT",
-  "keywords": ["xquad", "kanban", "mcp", "projetos", "cards"]
+  "keywords": [
+    "xquad",
+    "kanban",
+    "mcp",
+    "projetos",
+    "cards"
+  ]
 }

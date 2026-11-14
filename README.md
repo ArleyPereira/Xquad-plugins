@@ -60,6 +60,20 @@ O último comando abre o navegador: entre no Xquad e clique em **Permitir**. Dep
 
 O comando `codex` vem com o app do ChatGPT (`/Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex`).
 
+## In English
+
+Xquad is a Kanban project manager (https://xquad.app). This plugin connects your AI agent to your Xquad boards through Xquad's remote MCP server (`https://xquad.app/api/mcp`), with OAuth sign-in: no API token to copy. It also adds skills, triggered by plain conversation:
+
+- **iniciar-card** (start a card): moves it to the board's development column, which starts the time tracker, and suggests a branch name.
+- **concluir-card** (finish a card): comments what changed and how to test it, with the PR link, and moves the card forward.
+- **criar-card** (create a card): title and description with problem, solution and tests, following the space's label conventions.
+- **status-do-quadro** (board status): what is in progress, in testing and done.
+- **anexar-arquivo** (attach a file): uploads a local file to a card or page through a short-lived upload URL.
+
+The skills read each space's own conventions (development column, labels, versions, workflow pages), so they work with any board. The first time a tool is used, your client asks you to sign in to Xquad and click **Permitir** (Allow).
+
+Privacy policy: https://xquad.app/privacy · Terms: https://xquad.app/terms
+
 ## Estrutura
 
 ```
