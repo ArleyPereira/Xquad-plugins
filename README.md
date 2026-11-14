@@ -83,6 +83,14 @@ plugin.json                manifesto no padrão Agent Plugins
 .claude-plugin/            manifesto e marketplace do Claude Code
 ```
 
+## Suporte
+
+Dúvidas, problemas ou pedidos: **contact@xquad.app**. Vulnerabilidades: veja [SECURITY.md](SECURITY.md).
+
+O plugin só conversa com o Xquad (`https://xquad.app/api/mcp`): lê e altera os seus quadros com as mesmas permissões que você tem na tela. O skill `anexar-arquivo` envia o arquivo que você indicar para o Xquad com `curl`. Nada é enviado a outros serviços. Privacidade: https://xquad.app/privacy
+
+Support: **contact@xquad.app**. The plugin only talks to Xquad (`https://xquad.app/api/mcp`); the `anexar-arquivo` skill uploads the file you point to with `curl`, to Xquad only.
+
 ## Licença
 
 MIT
