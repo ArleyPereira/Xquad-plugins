@@ -1,0 +1,12 @@
+{
+  "name": "xquad",
+  "description": "Plugins oficiais do Xquad.",
+  "owner": { "name": "Xquad", "url": "https://xquad.app" },
+  "plugins": [
+    {
+      "name": "xquad",
+      "source": "./",
+      "description": "Trabalhe com os quadros do Xquad conversando: inicie, conclua e crie cards e veja o status do quadro."
+    }
+  ]
+}

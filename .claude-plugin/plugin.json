@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "xquad",
+  "displayName": "Xquad",
+  "version": "0.1.0",
+  "description": "Trabalhe com os quadros do Xquad conversando: inicie, conclua e crie cards e veja o status do quadro. Login pelo Xquad, sem token.",
+  "author": {
+    "name": "Xquad",
+    "url": "https://xquad.app"
+  },
+  "homepage": "https://xquad.app",
+  "privacyPolicyUrl": "https://xquad.app/privacy",
+  "repository": "https://github.com/ArleyPereira/Xquad-plugins",
+  "license": "MIT",
+  "icon": "./assets/icon.png",
+  "keywords": [
+    "xquad",
+    "kanban",
+    "mcp",
+    "projetos",
+    "cards"
+  ],
+  "mcpServers": {
+    "xquad": {
+      "type": "http",
+      "url": "https://xquad.app/api/mcp"
+    }
+  }
+}
