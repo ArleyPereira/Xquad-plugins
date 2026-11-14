@@ -11,7 +11,7 @@
   "homepage": "https://xquad.app",
   "privacyPolicyUrl": "https://xquad.app/privacy",
   "termsOfServiceUrl": "https://xquad.app/terms",
-  "supportUrl": "mailto:contact@xquad.app",
+  "supportUrl": "https://xquad.app/terms#contato",
   "documentationUrl": "https://github.com/ArleyPereira/Xquad-plugins#readme",
   "repository": "https://github.com/ArleyPereira/Xquad-plugins",
   "license": "MIT",
