@@ -46,9 +46,19 @@ Feche e abra o Cursor. Em **Customize › MCPs**, o **xquad** (Plugin) aparece e
 
 Já tinha o Xquad no `~/.cursor/mcp.json` com o mesmo endereço? O Cursor esconde o MCP do plugin enquanto essa entrada existir, mesmo desligada: remova a entrada antiga (com token) e reabra o Cursor.
 
-### Codex
+### Codex (app do ChatGPT)
 
-Em breve.
+Em breve no diretório de plugins da OpenAI. Até lá, no terminal:
+
+```bash
+codex plugin marketplace add ArleyPereira/Xquad-plugins
+codex plugin add xquad@xquad
+codex mcp login xquad
+```
+
+O último comando abre o navegador: entre no Xquad e clique em **Permitir**. Depois, abra um chat novo no Codex. O app ainda não pede esse login sozinho; sem ele, o Codex não usa o Xquad.
+
+O comando `codex` vem com o app do ChatGPT (`/Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex`).
 
 ## Estrutura
 
