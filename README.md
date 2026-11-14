@@ -28,9 +28,11 @@ As skills seguem as convenções do seu espaço (coluna de desenvolvimento, etiq
 /plugin install xquad@xquad
 ```
 
-Depois, em `/mcp`, escolha o Xquad e clique em **Authenticate**. O navegador abre o Xquad: entre e clique em **Permitir**.
+No app desktop do Claude, `/plugin` abre a tela de Plugins: rode os dois comandos acima no terminal, sem a barra (`claude plugin marketplace add ...` e `claude plugin install xquad@xquad`). O app e o terminal usam a mesma configuração.
 
-Se você já tinha adicionado o Xquad à mão (`claude mcp add ... xquad`), remova com `claude mcp remove xquad` para não ficar com ele duplicado.
+Abra uma sessão nova. Em `/mcp`, escolha **plugin:xquad:xquad** e clique em **Authenticate**. O navegador abre o Xquad: entre e clique em **Permitir**.
+
+Já tinha o Xquad conectado à mão (`claude mcp add`, com o mesmo endereço)? O Claude Code usa essa conexão e não cria outra: as skills funcionam com ela, sem login de novo.
 
 ### Cursor e Codex
 
