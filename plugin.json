@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "xquad",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Trabalhe com os quadros do Xquad conversando: inicie, conclua e crie cards e veja o status do quadro. Login pelo Xquad, sem token.",
   "author": {
     "name": "Xquad",
@@ -16,5 +16,96 @@
     "mcp",
     "projetos",
     "cards"
-  ]
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Xquad",
+        "shortDescription": "Quadros Kanban do Xquad",
+        "longDescription": "Trabalhe com os quadros do Xquad conversando. Inicie um card e ele vai para a coluna de desenvolvimento, com o cronômetro contando; conclua com um comentário do que mudou e como testar; crie cards seguindo as etiquetas do espaço; veja o que está em andamento, em teste e pronto; e anexe prints e arquivos do computador. Feito para times que usam o Xquad para organizar o trabalho. O login é pelo próprio Xquad (sem token), e o agente só vê e altera o que você pode ver e alterar na tela. Não cria espaços de outras pessoas nem acessa espaços em que você não está.",
+        "developerName": "Xquad",
+        "category": "Productivity",
+        "capabilities": [
+          "Ver o status do quadro",
+          "Criar cards",
+          "Iniciar e concluir cards",
+          "Comentar e anexar arquivos"
+        ],
+        "websiteURL": "https://xquad.app",
+        "supportURL": "https://xquad.app/terms#contato",
+        "privacyPolicyURL": "https://xquad.app/privacy",
+        "termsOfServiceURL": "https://xquad.app/terms",
+        "defaultPrompt": [
+          "Como está o quadro do meu espaço no Xquad?",
+          "Cria um card no Xquad para este bug",
+          "Iniciei o card APP-12"
+        ],
+        "brandColor": "#18181B",
+        "brandColorDark": "#FAFAFA",
+        "composerIcon": "./assets/logo.svg",
+        "logo": "./assets/logo.svg"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Board status",
+              "prompt": "How is the board of my DEMO space in Xquad?",
+              "tools_triggered": "get_board",
+              "expected_behavior": "Summarizes the DEMO board: cards in progress (development column), cards in testing and recently done, with each card's reference and title."
+            },
+            {
+              "description": "Create a card following the space's labels",
+              "prompt": "Create a card in the DEMO space for a bug: Google sign-in fails on Safari.",
+              "tools_triggered": "get_board, list_pages, create_card, set_card_labels",
+              "expected_behavior": "Creates a card in DEMO with a clear title and a description with problem, solution and tests, applies the Bug label, and replies with the new card reference."
+            },
+            {
+              "description": "Start a card",
+              "prompt": "I started DEMO-1.",
+              "tools_triggered": "get_card, get_board, move_card",
+              "expected_behavior": "Moves DEMO-1 to the development column (its timer starts), suggests a branch name such as fix/demo-1-..., and summarizes what the card asks for."
+            },
+            {
+              "description": "Finish a card",
+              "prompt": "I finished DEMO-1. Comment what changed (I fixed the login redirect) and send it to testing.",
+              "tools_triggered": "get_card, get_board, add_comment, move_card",
+              "expected_behavior": "Adds a comment to DEMO-1 with what changed and how to test it, then moves the card to the next column after development (the timer pauses)."
+            },
+            {
+              "description": "Cards waiting for testing",
+              "prompt": "Which cards are waiting for testing in DEMO?",
+              "tools_triggered": "get_board",
+              "expected_behavior": "Lists only the cards in the testing columns of DEMO, with reference and title."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated question (weather)",
+              "prompt": "What will the weather be like in São Paulo tomorrow?"
+            },
+            {
+              "description": "Creative writing with no project context",
+              "prompt": "Write a short poem about the sea."
+            },
+            {
+              "description": "Another project tool explicitly requested",
+              "prompt": "Create a task in Trello to review the contract."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "Primeira versão: status do quadro, criar, iniciar e concluir cards, e anexar arquivos, com login pelo Xquad.",
+        "translations": {
+          "en-US": {
+            "subtitle": "Xquad Kanban boards",
+            "description": "Work on your Xquad boards by chatting. Start a card and it moves to the development column with its timer running; finish it with a comment on what changed and how to test; create cards that follow the space's labels; see what is in progress, in testing and done; and attach files from your computer. Sign-in is through Xquad (no token), and the agent can only see and change what you can in the app."
+          }
+        }
+      }
+    }
+  }
 }
