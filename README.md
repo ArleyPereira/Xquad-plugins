@@ -79,8 +79,11 @@ Privacy policy: https://xquad.app/privacy · Terms: https://xquad.app/terms
 ```
 skills/                    skills compartilhadas pelas três ferramentas
 mcp.json                   MCP do Xquad (padrão Agent Plugins: Cursor e Codex)
-plugin.json                manifesto no padrão Agent Plugins
+plugin.json                manifesto no padrão Agent Plugins, com a vitrine e a revisão da OpenAI
 .claude-plugin/            manifesto e marketplace do Claude Code
+.cursor-plugin/            manifesto do Cursor
+.agents/plugins/           marketplace do Codex
+assets/                    ícone (PNG) e logo (SVG)
 ```
 
 ## Suporte
