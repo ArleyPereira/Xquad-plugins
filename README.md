@@ -34,7 +34,19 @@ Abra uma sessão nova. Em `/mcp`, escolha **plugin:xquad:xquad** e clique em **A
 
 Já tinha o Xquad conectado à mão (`claude mcp add`, com o mesmo endereço)? O Claude Code usa essa conexão e não cria outra: as skills funcionam com ela, sem login de novo.
 
-### Cursor e Codex
+### Cursor
+
+Em breve no Marketplace do Cursor. Até lá, instale como plugin local:
+
+```bash
+git clone https://github.com/ArleyPereira/Xquad-plugins.git ~/.cursor/plugins/local/xquad
+```
+
+Feche e abra o Cursor. Em **Customize › MCPs**, o **xquad** (Plugin) aparece em "Needs Attention": clique em **Authenticate** e, no navegador, em **Permitir**.
+
+Já tinha o Xquad no `~/.cursor/mcp.json` com o mesmo endereço? O Cursor esconde o MCP do plugin enquanto essa entrada existir, mesmo desligada: remova a entrada antiga (com token) e reabra o Cursor.
+
+### Codex
 
 Em breve.
 
