@@ -83,7 +83,7 @@ plugin.json                manifesto no padrão Agent Plugins, com a vitrine e a
 .claude-plugin/            manifesto e marketplace do Claude Code
 .cursor-plugin/            manifesto do Cursor
 .agents/plugins/           marketplace do Codex
-assets/                    ícone (PNG) e logo (SVG)
+assets/                    ícone (PNG)
 ```
 
 ## Suporte
