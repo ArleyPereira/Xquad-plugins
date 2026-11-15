@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "xquad",
   "displayName": "Xquad",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Trabalhe com os quadros do Xquad conversando: inicie, conclua e crie cards e veja o status do quadro. Login pelo Xquad, sem token.",
   "author": {
     "name": "Xquad",
